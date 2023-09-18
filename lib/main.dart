@@ -1,32 +1,20 @@
+import 'package:dice_app/gredient_container.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp( MaterialApp(
-    home: Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Colors.greenAccent,
-              Colors.pinkAccent,
-              Colors.blue,
-            ],
-            begin: Alignment.topRight,
-            end: Alignment.centerLeft
-          )
-        ),
-        child:  const Center(
-          child: Text(
-              "Hello Abubakar",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 30.0,
-              color: Colors.white
-            ),
-          ),
-        ),
-      )
+
+  var name = "Aliyu Abdullahi";
+  const color1 = Color.fromARGB(255, 175, 234, 151);
+  const color2 = Color.fromARGB(255, 163, 204, 236);
+  const color3 = Color.fromARGB(255, 234, 164, 218);
+   List<Color> colors = [color1,color2,color3];
+  runApp(
+     MaterialApp(
+      home: Scaffold(body:
+      GradientContainer(name,colors),
       ),
     ),
   );
 }
+
+
